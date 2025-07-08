@@ -1,0 +1,26 @@
+@use "../styles/main";
+
+.container {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    background-color: #202020;
+    width: 40%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0 20px;
+    color: main.$main-color;
+    font-size: 1.4rem;
+
+    :active, :focus, :hover{
+      border: none;
+      outline: none;
+    }
+
+  }
+}

@@ -1,0 +1,88 @@
+@use "../../../styles/main";
+
+.section-game-card {
+  width: 250px;
+  height: 300px;
+  background-color: rgb(12, 12, 12);
+  border-radius: 20px;
+
+  img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+  }
+
+  .content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 117px - 30px);
+
+    .tags {
+      display: flex;
+      gap: 5px;
+      width: fit-content;
+
+      .tag {
+        cursor: pointer;
+        flex: 0 0 auto;
+        font-size: .8rem;
+        opacity: .8;
+        border-radius: 20px;
+        border: 2px solid rgba(0, 193, 255, 0.2);
+        padding: 3px 13px;
+        background-color: rgba(0, 193, 255, 0.2);
+      }
+    }
+
+    .title {
+      cursor: pointer;
+      padding: 5px 10px 5px 10px;
+      margin: 5px 0 0 -10px;
+      width: fit-content;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:hover {
+        background: linear-gradient(to right, rgba(236, 2, 52, .8), rgba(251, 2, 222, .8));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .time-version-group {
+      margin: 0;
+      display: flex;
+      vertical-align: center;
+      width: fit-content;
+    }
+
+    .uploader, .time-elapsed, .version, .size {
+      margin: 0 15px 0 0;
+      color: rgba(main.$main-color, .5);
+      font-size: .8rem;
+      width: fit-content;
+    }
+
+    .numeric-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0;
+      flex: 1;
+      gap: 10px;
+
+      .views, .downloads, .comments {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+      }
+
+      svg {
+        transform: scale(.6);
+      }
+    }
+  }
+}

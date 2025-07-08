@@ -1,0 +1,14 @@
+@use "styles/main";
+
+body {
+  margin: 0;
+  font-family: 'Satoshi', sans-serif;
+  background-color: main.$main-background-color;
+  color: main.$main-color;
+  overflow-x: hidden;
+}
+
+.nav-menu-element {
+  text-decoration: none !important;
+  color: main.$main-color !important;
+}

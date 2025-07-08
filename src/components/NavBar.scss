@@ -1,0 +1,114 @@
+@use "../styles/main";
+
+nav {
+  z-index: 9999;
+  $nav-sides-padding: 40px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: calc(100vw - calc($nav-sides-padding*2));
+  padding: 0 $nav-sides-padding;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  background: rgba(23, 23, 23, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  .logo {
+    margin-top: 5px;
+    cursor: pointer;
+    transition: .2s ease-out transform;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .menu {
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    li {
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80%;
+      padding: 0 20px;
+      cursor: pointer;
+      font-weight: bold;
+      gap: 5px;
+      transition: .2s ease-out background-color;
+      svg {
+        transition: transform .2s ease-out, color .2s ease-out;
+      }
+      &:hover {
+        background-color: main.$secondary-hover-background-color;
+        svg {
+          color: main.$secondary-color;
+          transform: scale(1.2);
+        }
+      }
+      a {
+        text-decoration: none !important;
+        color: main.$main-color !important;
+      }
+    }
+  }
+
+  .user {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    gap: 10px;
+    text-decoration: none;
+    color: main.$main-color;
+    img {
+      border-radius: 50%;
+      transition: .2s ease-out transform;
+    }
+    span {
+      transition: transform .2s ease-out, color .2s ease-out;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+      span {
+        color: main.$secondary-color;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .user-icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    text-decoration: none;
+    color: main.$main-color;
+    transition: transform .2s ease-out, color .2s ease-out;
+    &:hover {
+      color: main.$secondary-color;
+      transform: scale(1.2);
+    }
+  }
+}

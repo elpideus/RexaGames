@@ -1,16 +1,13 @@
-import { component$, isDev } from "@builder.io/qwik";
+import {component$, isDev, useStylesScoped$} from "@builder.io/qwik";
 import { QwikCityProvider, RouterOutlet } from "@builder.io/qwik-city";
 import { RouterHead } from "./components/router-head/router-head";
 
-import "./global.css";
+import styles from "./global.scss?inline";
+import NavBar from "~/components/NavBar";
+import SearchBar from "~/components/SearchBar";
 
 export default component$(() => {
-  /**
-   * The root of a QwikCity site always start with the <QwikCityProvider> component,
-   * immediately followed by the document's <head> and <body>.
-   *
-   * Don't remove the `<head>` and `<body>` elements.
-   */
+  useStylesScoped$(styles);
 
   return (
     <QwikCityProvider>
@@ -25,7 +22,11 @@ export default component$(() => {
         <RouterHead />
       </head>
       <body lang="en">
-        <RouterOutlet />
+        <NavBar />
+        <SearchBar />
+        <main>
+            <RouterOutlet />
+        </main>
       </body>
     </QwikCityProvider>
   );

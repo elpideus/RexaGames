@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-VariableItalic.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+$main-background-color: rgb(23, 23, 23);
+$main-hover-background-color: rgb(32, 32, 32);
+$secondary-hover-background-color: rgb(42, 42, 42);
+$main-color: rgb(215, 215, 215);
+$secondary-color: rgba(254, 35, 135, .8);
